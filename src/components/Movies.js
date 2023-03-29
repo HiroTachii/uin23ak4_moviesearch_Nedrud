@@ -4,7 +4,7 @@ const Movies = (props) => {
         <>
         {props.movies.map((movie) => (
             <div key={movie.imdbID}>
-            <img src={movie.Poster} alt={movie.Title}/>
+            <img src={movie.Poster !== "N/A" ? movie.Poster : "https://via.placeholder.com/300x450?text=Picture+not+available"} alt={movie.Title}/>
             <p>{movie.Title}</p>
             <p>{movie.Year}</p>
             <p>{movie.Genre}</p>
@@ -13,7 +13,7 @@ const Movies = (props) => {
             <p>{movie.imdbRating}</p>
             <p>{movie.Awards}</p>
             </div>
-        ))} 
+        ))}
        </>
     );
 };
