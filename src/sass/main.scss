@@ -1,0 +1,104 @@
+::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+
+    margin: 0;
+    background-color: #171A23;
+}
+
+.width {
+    max-width: 1200px;
+}
+
+main {
+    margin: 5em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3em;
+
+    input {
+        width: 100%;
+        padding: 1em;
+        border: none;
+        border-radius: .75rem;
+        background-color: #313858;
+        color: #8E93B1;
+
+        &::placeholder {
+            color: #8E93B1;
+        }
+    }
+
+    h1 {
+        width: 100%;
+        text-align: center;
+        color: #ffffff;
+    }
+
+    section {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5em;
+
+        .movie {
+            width: 100%;
+            background-color: #313858;
+            border-radius: .75rem;
+
+            &-inner {
+                padding: 2em;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1em;
+            }
+
+            &-left {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    width: 100%;
+                    border-radius: .75rem;
+                }
+            }
+
+            &-right {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 1em;
+
+                h2 {
+                    color: #ffffff;
+                    margin: 0;
+                }
+
+                p {
+                    color: #ADB4D9;
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 900px) {
+
+    section {
+        grid-template-columns: 1fr !important;
+    }
+}
